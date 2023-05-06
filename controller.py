@@ -1,16 +1,11 @@
 from model import Model
-from view import View
+
 
 class Controller:
-    def __init__(self):
-        self.objView = View()
-        self.objModel = Model()
-
-    def run(self):
-        self.objModel.setWeight(self.objView.weight)
-        self.objModel.setHeight(self.objView.height)
-        self.objModel.getResult(self.objModel.weight,self.objModel.height)
+    def Calcular(weight, height):
+        objModel = Model()
+        objModel.setWeight(weight)
+        objModel.setHeight(height)
+        return objModel.getResult(weight,height)
 
 
-controller = Controller()
-controller.run()

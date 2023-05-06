@@ -18,7 +18,7 @@ class Model:
         return self.weight
         
     def getResult(self, weight, height):
-        self.result = (float(weight) / pow(float(height),2))
+        self.result = round(float(weight) / pow(float(height),2), 1)
         if(self.result<18.5):
             self.resultType="Bajo peso"
         elif (self.result>18.5 and self.result<24.9):
@@ -31,5 +31,4 @@ class Model:
             self.resultType="Obesidad grado 2"
         else:
             self.resultType="Obesidad grado 3, Obesidad mórbida"
-        print("Su IMC es -> ",self.result)
-        print(self.resultType)
+        return str(self.resultType) +" su IMC es \n"+ str(self.result)
