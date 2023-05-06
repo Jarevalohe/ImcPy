@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import * 
 from controller import Controller
 class View:
     def __init__(self):
